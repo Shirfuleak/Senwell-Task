@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Sign in</title>
+  </head>
+  <body>
+    <div className="maindiv">
+    <div className="container outerdiv">
+      <div className="forms-container">
+        <div className="signin-signup">
+          <form action="#" className="sign-in-form"  onsubmit="return validateForm()">
+            <h2 className="title"> Welcome</h2>
+            <h3 >Log in to your to continue</h3>
+            <div className="input-field">
+              <i className="fas fa-user"></i>
+              <input type="text" placeholder="awesome@user.com" required/>
+            </div>
+            <div className="input-field">
+              <i className="fas fa-lock"></i>
+              
+              <input type="password" placeholder="......." id='password'/>
+             <p className="errormail"> </p>
+            </div>
+            <a href="#">Forget your password?</a>
+            <input type="submit" value="Login" className="btn solid" />
+            <p className="social-text">Don't have an account?<a href="#" >Sign up</a></p>
+            <div className="social-media">
+              <a href="#" className="social-icon">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" className="social-icon">
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="#" className="social-icon">
+                <i className="fab fa-google"></i>
+              </a>
+              <a href="#" className="social-icon">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+    <script >
+         function validateForm()
+         {
+
+         var pass=document.getElementById('password').value;
+         var passcheck='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}';
+      
+          if(passcheck.test(pass))
+          {
+                document.getElementByclassName("errormail").innerHTML=" ";
+            }
+            else{
+                document.getElementByclassName("errormail").innerHTML="**Invalid Mail ** ";
+                return false;
+            }
+         }
+        
+
+
+    </script>
+  </body>
+</html>
