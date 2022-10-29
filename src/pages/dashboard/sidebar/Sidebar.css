@@ -1,0 +1,28 @@
+.sidebar{
+    background-color: rgb(237, 237, 229);
+    height: 75vh;
+    width: 200px;
+    padding-left: 20px;
+    border: 1px black solid;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+img{
+    width: 100px;
+    margin-top: 10px;
+ 
+}
+li:hover{
+    background-color: white;
+    color: black;
+    margin-right: 35px;
+    border-radius: 5px;
+}
